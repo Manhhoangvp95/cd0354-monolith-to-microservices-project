@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
     # Use the same Docker base as the project
-      - image: circleci/node
+      - image: cimg/node:13.10.1
 
     working_directory: ~/repo
 
