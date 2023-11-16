@@ -22,4 +22,4 @@ jobs:
             cd ~/repo
             docker-compose -f docker-compose-build.yaml build --parallel
             docker login --username=$DOCKER_USER --password=$DOCKER_PASS
-            docker push muthiendia/udagram-frontend:latest
+            docker-compose -f docker-compose-build.yaml push
