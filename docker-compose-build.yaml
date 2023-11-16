@@ -3,16 +3,16 @@ services:
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
-    image: muthiendia/reverseproxy
+    image: muthiendia/reverseproxy:latest
   backend_user:
     build:
       context: ./udagram-api-user
-    image: muthiendia/udagram-api-user
+    image: muthiendia/udagram-api-user:latest
   backend_feed:
     build:
       context: ./udagram-api-feed
-    image: muthiendia/udagram-api-feed
+    image: muthiendia/udagram-api-feed:latest
   frontend:
     build:
       context: ./udagram-frontend
-    image: muthiendia/udagram-frontend:local
+    image: muthiendia/udagram-frontend:latest
