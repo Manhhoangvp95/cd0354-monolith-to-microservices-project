@@ -17,7 +17,9 @@ jobs:
           version: 20.10.14
           docker_layer_caching: true
       - run:
-          name: install dependencies
+          name: build and upload image
           command: |
             cd ~/repo
             docker-compose -f docker-compose-build.yaml build --parallel
+            docker login --username=$DOCKER_USER --password=$DOCKER_PASS
+            docker push udagram-frontend:latest muthiendia/udagram-frontend:latest
