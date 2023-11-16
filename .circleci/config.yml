@@ -13,8 +13,11 @@ jobs:
 
     steps:
       - checkout
-      
+      - setup_remote_docker:
+          version: 20.10.14
+          docker_layer_caching: true
       - run:
-          name: build
+          name: install dependencies
           command: |
+            cd ~/repo
             docker-compose -f docker-compose-build.yaml build --parallel
