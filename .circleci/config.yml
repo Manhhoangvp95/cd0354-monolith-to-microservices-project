@@ -13,8 +13,9 @@ jobs:
 
     steps:
       - checkout
-
       - run:
-          name: install dependencies
+          name: build
           command: |
+            pwd
+            ls
             docker-compose -f docker-compose-build.yaml build --parallel
